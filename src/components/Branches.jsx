@@ -1,36 +1,24 @@
 // src/components/Branches.jsx
+import kerichoImg from "../assets/kericho.jpg";
+import kapsoitImg from "../assets/kapsoit.jpg";
+import bometImg from "../assets/bomet.jpg";
+import liteinImg from "../assets/litein.jpg";
 import BranchCard from "./BranchCard";
 
 const branches = [
-  {
-    name: "Kericho",
-    description: "Located in the heart of the tea-growing region — great for business & leisure.",
-    address: "Kericho town",
-  },
-  {
-    name: "Kapsoit",
-    description: "A cozy stopover with serene views and welcoming hospitality.",
-    address: "Kapsoit town",
-  },
-  {
-    name: "Bomet",
-    description: "Perfect for travelers and families, with modern amenities.",
-    address: "Bomet town",
-  },
-  {
-    name: "Litein",
-    description: "Charming and peaceful, known for warm service and comfort.",
-    address: "Litein town",
-  },
+  { name: "Kericho", description: "Our flagship hotel with serene tea estate views.", image: kerichoImg },
+  { name: "Kapsoit", description: "A cozy retreat perfect for travelers.", image: kapsoitImg },
+  { name: "Bomet", description: "Modern amenities and warm hospitality.", image: bometImg },
+  { name: "Litein", description: "Conveniently located in the town center.", image: liteinImg },
 ];
 
 export default function Branches() {
   return (
-    <section id="branches" className="py-12 px-6 bg-gray-50 flex-grow">
-      <h3 className="text-3xl font-semibold text-center mb-8 text-emerald-700">Our Branches</h3>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        {branches.map((branch, i) => (
-          <BranchCard key={i} branch={branch} index={i} />
+    <section id="branches" className="py-16 px-6 bg-gray-50">
+      <h2 className="text-3xl font-bold text-center mb-10">Our Branches</h2>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {branches.map((branch) => (
+          <BranchCard key={branch.name} {...branch} />
         ))}
       </div>
     </section>
