@@ -17,7 +17,7 @@ export default function Navbar() {
           <li><a href="#home" className="hover:text-emerald-600">Home</a></li>
           <li><a href="#branches" className="hover:text-emerald-600">Branches</a></li>
           <li><a href="#about" className="hover:text-emerald-600">About</a></li>
-          <li><a href="#contact" className="hover:text-emerald-600">Contact</a></li>
+          <li><a href="#contact" className="hover:text-emerald-600">Contacts</a></li>
         </ul>
       </nav>
     </header>
